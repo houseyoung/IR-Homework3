@@ -43,8 +43,14 @@ public class IndexController {
     @RequestMapping(value = {"search"}, method = RequestMethod.POST)
     public String search(String queryWord, Model model) throws Exception{
         try {
+            //计时器开始
+            long startTime = System.currentTimeMillis();
+
             //搜索
             List<DocEntity> docList = searchService.search(queryWord);
+
+            //计时器结束
+            long endTime = System.currentTimeMillis();
 
             //输出关键词
             model.addAttribute("queryWord", queryWord);
@@ -52,6 +58,8 @@ public class IndexController {
             model.addAttribute("num", docList.size());
             //输出搜索结果
             model.addAttribute("docList", docList);
+            //输出耗时
+            model.addAttribute("time", (endTime - startTime));
             return "search";
         } catch (Exception e) {
             model.addAttribute("error", e.getMessage());

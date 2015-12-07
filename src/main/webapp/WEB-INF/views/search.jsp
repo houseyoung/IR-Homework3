@@ -11,7 +11,7 @@
   <button type="submit"><i class="fa fa-search"></i>搜索</button>
 </form>
 <p>
-Houseyoung为您找到相关结果${num}个
+Houseyoung为您找到相关结果${num}个，耗时${time}毫秒
 <p>
 <c:forEach var="doc" items="${docList}">
   <a href="${website}resources/Doc/${doc.docName}">${doc.docName}</a>
