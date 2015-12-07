@@ -4,10 +4,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Index</title>
+  <title>Search</title>
 </head>
+<form action="${website}search" method="post">
+  <input type="text" name="queryWord" value="${queryWord}">
+  <button type="submit"><i class="fa fa-search"></i>&nbsp;搜索</button>
+</form>
+<p>
+Houseyoung为您找到相关结果${num}个
+<p>
 <c:forEach var="doc" items="${docList}">
-  ${doc.docName} <br>
+  <a href="${website}resources/Doc/${doc.docName}">${doc.docName}</a>
+  <br>
+  ${doc.searchAbstract} - <a href="${website}cache?docName=${doc.docName}">文档快照</a>
+  <p>
 </c:forEach>
 </body>
 </html>
