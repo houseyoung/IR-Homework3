@@ -36,10 +36,10 @@ public class CacheServiceImpl implements CacheService {
         //读取Word文档中的内容
         InputStream in = new FileInputStream(file);
         WordExtractor extractor = new WordExtractor(in);
-        String cacheContent = extractor.getText();
+        String cacheContent = "<p>" + extractor.getText();
 
         //将换行符转换为HTML的换行符
-        cacheContent = cacheContent.replaceAll("\r\n", "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+        cacheContent = cacheContent.replaceAll("\r\n", "</p> <p>");
 
         return cacheContent;
     }

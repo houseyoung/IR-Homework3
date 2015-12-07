@@ -8,7 +8,7 @@
 </head>
 <form action="${website}search" method="post">
   <input type="text" name="queryWord" value="${queryWord}">
-  <button type="submit"><i class="fa fa-search"></i>&nbsp;搜索</button>
+  <button type="submit"><i class="fa fa-search"></i>搜索</button>
 </form>
 <p>
 Houseyoung为您找到相关结果${num}个
