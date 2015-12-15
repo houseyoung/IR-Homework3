@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cache</title>
+  <title>${docName}</title>
 </head>
 <body>
 <form action="${website}search" method="post">

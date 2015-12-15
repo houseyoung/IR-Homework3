@@ -1,18 +1,15 @@
 package com.houseyoung.IRHomework3.controller;
 
 import com.houseyoung.IRHomework3.entity.DocEntity;
-import com.houseyoung.IRHomework3.service.CacheService;
 import com.houseyoung.IRHomework3.service.SearchService;
-import org.apache.lucene.document.Document;
+import com.houseyoung.IRHomework3.service.WordToHtmlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -28,7 +25,7 @@ public class IndexController {
     private SearchService searchService;
 
     @Autowired
-    private CacheService cacheService;
+    private WordToHtmlService wordToHtmlService;
 
     @RequestMapping(value = {"", "/", "index"}, method = RequestMethod.GET)
     public String toIndex(Model model) throws Exception{
@@ -70,7 +67,7 @@ public class IndexController {
     @RequestMapping(value = {"cache"}, method = RequestMethod.GET)
     public String toCache(@RequestParam("docName") String docName, Model model) throws Exception{
         try {
-            String cacheContent = cacheService.getCacheContent(docName);
+            String cacheContent = wordToHtmlService.wordToHtmlContent(docName);
 
             //输出文档名
             model.addAttribute("docName", docName);
