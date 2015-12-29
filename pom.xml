@@ -130,15 +130,6 @@
             <version>1.0</version>
         </dependency>
 
-        <!--庖丁解牛分词-->
-        <dependency>
-            <groupId>net.paoding.analysis.analyzer</groupId>
-            <artifactId>PaodingAnalyzer</artifactId>
-            <version>2.0.4</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/paoding-analysis-2.0.4.jar</systemPath>
-        </dependency>
-
         <!--Lucene-->
         <dependency>
             <groupId>org.apache.lucene</groupId>
