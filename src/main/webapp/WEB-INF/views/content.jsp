@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>${docName}</title>
-  <link rel="stylesheet" href="../resources/tool/bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="../resources/css/reset.css">
-  <link rel="stylesheet" href="../resources/css/content.css">
+  <link rel="stylesheet" href="${website}resources/tool/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="${website}resources/css/reset.css">
+  <link rel="stylesheet" href="${website}resources/css/content.css">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"  media="screen"/>
-  <script type="text/javascript" src="../resources/tool/jquery/jquery.js"></script>
+  <script type="text/javascript" src="${website}resources/tool/jquery/jquery.js"></script>
 </head>
 <body>
 <div class="page clearfix">
@@ -25,13 +25,13 @@
   </div>
   <div class="content-background clearfix">
     <a class="content-left" href="${website}content?docName=${preDocName}">
-      <img class="dir-link-left" src="../resources/img/left.png" alt="向左">
+      <img class="dir-link-left" src="${website}resources/img/left.png" alt="向左">
     </a>
     <div class="content" style="text-indent:2em">
       ${content}
     </div>
     <a class="content-right" href="${website}content?docName=${nextDocName}">
-      <img class="dir-link-right" src="../resources/img/right.png" alt="向右">
+      <img class="dir-link-right" src="${website}resources/img/right.png" alt="向右">
     </a>
   </div>
 </div><!-- page -->

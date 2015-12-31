@@ -7,11 +7,11 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<title>检索结果</title>
-		<link rel="stylesheet" href="../resources/tool/bootstrap/css/bootstrap.css" />
-		<link rel="stylesheet" href="../resources/css/reset.css">
-		<link rel="stylesheet" href="../resources/css/result-list.css">
+		<link rel="stylesheet" href="${website}resources/tool/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="${website}resources/css/reset.css">
+		<link rel="stylesheet" href="${website}resources/css/result-list.css">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"  media="screen"/>
-		<script type="text/javascript" src="../resources/tool/jquery/jquery.js"></script>
+		<script type="text/javascript" src="${website}resources/tool/jquery/jquery.js"></script>
 	</head>
 	<body>
 		<div class="page clearfix" style="margin-bottom: 20px">
