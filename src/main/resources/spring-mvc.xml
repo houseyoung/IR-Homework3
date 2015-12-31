@@ -24,4 +24,7 @@
 
     <!--静态资源路径-->
     <mvc:resources mapping="/resources/**" location="/resources/" />
+
+    <!--网站Logo-->
+    <mvc:resources mapping="favicon.ico" location="favicon.ico" />
 </beans>

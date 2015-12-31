@@ -64,19 +64,47 @@ public class IndexController {
         }
     }
 
-    @RequestMapping(value = {"cache"}, method = RequestMethod.GET)
-    public String toCache(@RequestParam("docName") String docName, Model model) throws Exception{
+    @RequestMapping(value = {"content"}, method = RequestMethod.GET)
+    public String toContent(@RequestParam("docName") String docName,
+                            @RequestParam(required = false) String queryWord,
+                            Model model) throws Exception{
         try {
-            String cacheContent = wordToHtmlService.wordToHtmlContent(docName);
+            //获取文档内容
+            String content = wordToHtmlService.wordToHtmlContent(docName);
 
-            //输出文档名
+            //获取文档编号
+            int docNumber = Integer.parseInt(docName.substring(3, docName.length() - 4));
+
+            //获取上一个、下一个文档名
+            String preDocName = "";
+            String nextDocName = "";
+            if (docNumber == 1) {
+                preDocName = "Doc30.doc";
+                nextDocName = "Doc" + (docNumber + 1) + ".doc";
+            }
+            else if (docNumber == 30) {
+                preDocName = "Doc" + (docNumber - 1) + ".doc";
+                nextDocName = "Doc1.doc";
+            }
+            else {
+                preDocName = "Doc" + (docNumber - 1) + ".doc";
+                nextDocName = "Doc" + (docNumber + 1) + ".doc";
+            }
+
+            //输出关键词
+            model.addAttribute("queryWord", queryWord);
+            //输出本文档名
             model.addAttribute("docName", docName);
+            //输出上一个文档名
+            model.addAttribute("preDocName", preDocName);
+            //输出下一个文档名
+            model.addAttribute("nextDocName", nextDocName);
             //输出文档快照
-            model.addAttribute("cacheContent", cacheContent);
-            return "cache";
+            model.addAttribute("content", content);
+            return "content";
         } catch (Exception e) {
             model.addAttribute("error", e.getMessage());
-            return "cache";
+            return "content";
         }
     }
 }
