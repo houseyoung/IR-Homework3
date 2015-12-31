@@ -17,7 +17,7 @@
 		<div class="page clearfix" style="margin-bottom: 20px">
 			<div class="top clearfix">
 				<form class="info-search" action="${website}search" method="post">
-					<img class="logo" src="../resources/img/logo.png">
+					<img class="logo" src="${website}resources/img/logo.png">
 					<input class="search-area" type="text" name="queryWord" value="${queryWord}" title="输入搜索词" type="search" maxlength="100" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="both" aria-expanded="false">
 					<input class="search-submit" value="搜索" type="submit">
 					<a class="back-link" href="${website}">返回首页</a>
