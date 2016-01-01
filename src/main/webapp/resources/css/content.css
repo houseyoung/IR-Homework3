@@ -34,6 +34,7 @@ div{
     cursor: pointer;
     left: -4px;
     margin-right: 110px;
+    top: 1px;
 }
 .content-background{
 	background: #F8F8F8;

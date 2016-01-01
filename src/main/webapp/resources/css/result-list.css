@@ -57,6 +57,7 @@ a.download-link:hover{
     cursor: pointer;
     left: -4px;
     margin-right: 110px;
+    top: 1px;
 }
 .back-link{
     float:right;margin-right:30px; margin-top:25px;
