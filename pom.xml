@@ -18,6 +18,8 @@
         <slf4j.version>1.6.6</slf4j.version>
         <!--Lucene版本号-->
         <lucene.version>4.6.0</lucene.version>
+	<!--设置编码为UTF-8，解决在Windows下使用XShell链接服务器无法编译的问题-->
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
